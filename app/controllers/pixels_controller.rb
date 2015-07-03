@@ -4,7 +4,11 @@ class PixelsController < ApplicationController
 	end
 
 	def create
-		@pixel = Pixel.create!
+		if pixel_params[:tracking_string]
+			@pixel = Pixel.find_by(tracking_string: pixel_params[:tracking_string])
+		else
+			@pixel = Pixel.create!
+		end
 		redirect_to @pixel
 	end
 

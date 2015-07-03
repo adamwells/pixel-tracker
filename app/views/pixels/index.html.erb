@@ -1,0 +1,18 @@
+<h2>Create New Tracking Pixel</h2>
+<form action="/pixels" method="POST">
+	<input type="hidden"
+				 name="authenticity_token"
+				 value="<%= form_authenticity_token %>">
+	<input type="submit" value="Create Pixel">
+</form>
+
+<br>
+
+<h2>View Visits for Existing Pixel</h2>
+<form action="/pixels" method="POST">
+	<input type="hidden"
+				 name="authenticity_token"
+				 value="<%= form_authenticity_token %>">
+	<input type="text" name="tracking_string" placeholder="Enter Tracking String">
+	<input type="Submit" value="Visit Pixel Page">
+</form>
