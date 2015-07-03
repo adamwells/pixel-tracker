@@ -9,6 +9,8 @@
 #
 
 class Pixel < ActiveRecord::Base
+	has_many :visits
+
 	validates :tracking_string, presence: true, uniqueness: true
 
 	after_initialize :ensure_tracking_string

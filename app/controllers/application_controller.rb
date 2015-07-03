@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   helper_method :generate_snippet
 
   def generate_snippet(pixel)
-  	"<img src=\"#{request.base_url}/trackers/#{pixel.tracking_string}\" width=\"1\" height=\"1\">"
+  	"<img src=\"#{request.base_url}/visits/#{pixel.tracking_string}.png\" width=\"1\" height=\"1\">"
   end
 end

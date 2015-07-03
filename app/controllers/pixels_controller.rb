@@ -15,7 +15,6 @@ class PixelsController < ApplicationController
 	private
 
 	def pixel_params
-		print params
-		params.permit(:tracking_string)
+		params.permit(:tracking_string, :id)
 	end
 end
