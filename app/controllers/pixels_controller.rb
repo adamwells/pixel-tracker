@@ -10,6 +10,7 @@ class PixelsController < ApplicationController
 
 	def show
 		@pixel = Pixel.find_by(pixel_params)
+		@visits = Visit.where(pixel_id: @pixel.id)
 	end
 
 	private

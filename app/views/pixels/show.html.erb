@@ -3,4 +3,9 @@
 <p>To use the pixel, insert the following code into your webpage:<br>
 <%= generate_snippet(@pixel) %></p>
 
-<p>The requests for this pixel can be seen here:</p>
+<p>The requests for this pixel are as follows:</p>
+<ul>
+	<% @visits.each do |visit| %>
+		<li><%= "IP Address: #{visit.ip_address}, Time: #{visit.created_at}" %></li>
+	<% end %>
+</ul>
